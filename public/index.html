@@ -1,0 +1,14 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>jiiaaannn — Trend Following MA 20</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style id="css"></style></head>
+<body><div id="app"></div>
+<script type="module">
+import { forwardFromLogs, botStatus, latihanFromLogs } from './metrics.js';
+import { renderDashboard, CSS, SHELL, pasangMenu } from './render.js';
+document.getElementById('css').textContent = CSS;
+document.getElementById('app').innerHTML = SHELL('Dashboard langsung dari log bot (<a href="/api/state">/api/state</a>). Angka gap backtest vs forward muncul setelah hitung_ulang dijalankan di akhir forward test.');
+pasangMenu(document);
+try {
+  const [st, bt] = await Promise.all([fetch('/api/state?snap=BTCIDR').then(r => r.json()), fetch('/backtest_ringkasan.json').then(r => r.json())]);
+  const [gap, kurva, pnl] = await Promise.all(['/hasil_hitung_ulang.json', '/backtest_kurva.json', '/backtest_pnl.json'].map(u => fetch(u).then(r => r.ok ? r.json() : null).catch(() => null)));
+  renderDashboard(document.getElementById('o'), { bt, fw: forwardFromLogs(st), gap: gap?.gap ?? null, sumber: location.origin + '/api/state', status: botStatus(st), latihan: latihanFromLogs(st), kurva, pnl });
+} catch (e) { document.getElementById('o').textContent = 'Gagal memuat: ' + e; }
+</script></body></html>
