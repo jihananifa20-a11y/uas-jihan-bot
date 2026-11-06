@@ -40,6 +40,9 @@ MA 20 candle 4 jam tanpa penyesuaian juga diuji sebagai pembanding pada 5 Nov 20
 
 Keterbatasan: median spread memakai snapshot order book dari bot lain sampai 2026-11-04 02:40 UTC (`data/snapshots/`). Hasil bisa jauh berbeda di forward test.
 
+## Catatan sesudah freeze
+- 7 Nov 2026 subuh: `FREEZE_AT` (6 Nov 17.37 WIB) baru termuat di Vercel karena deploy sesudah freeze tertunda. Dari freeze sampai saat itu bot tetap berjalan otomatis dengan aturan yang sama, tanpa sinyal dan tanpa order, lalu state direset sekali (`RESET_STATE_FREEZE`) saat deploy.
+
 ## Menjalankan
 ```
 node tools/fetch_history.mjs 240 2022-02-01
