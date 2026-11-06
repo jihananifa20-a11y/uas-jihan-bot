@@ -7,7 +7,7 @@
 | Nama / NIM | Jihan Anifa / 25110200009 |
 | Vercel | https://uas-jihan-bot.vercel.app |
 | Repo | https://github.com/jihananifa20-a11y/uas-jihan-bot |
-| Commit freeze | _(belum diisi; catat waktu aslinya)_ |
+| Commit freeze | `861d7a7b0339cb066f5fcf28834146c00635af99` (2026-11-06T17:37:27+07:00) |
 
 ## Strategi
 Sumber: AFL "Trend Following MA 20" di `Dashboard_Jihan.html`. Sinyal ada di `lib/strategy.js`, dan satu fungsi `decide()` dipakai bot serta backtest.
