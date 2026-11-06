@@ -1,11 +1,11 @@
 # Bot Dry Run Indodax: Trend Following MA 20
 
-> **Status: belum di-deploy dan belum di-freeze.** Link Vercel dan commit freeze belum diisi.
+> **Freeze terlambat:** dilakukan sesudah batas 4 Nov 2026 12.00 WIB dengan izin dosen. Forward test tetap berakhir 14 Nov 2026 12.00 WIB, jadi kurang dari 10 hari.
 
 | | |
 |---|---|
 | Nama / NIM | Jihan Anifa / 25110200009 |
-| Vercel | _(belum diisi)_ |
+| Vercel | https://uas-jihan-bot.vercel.app |
 | Repo | https://github.com/jihananifa20-a11y/uas-jihan-bot |
 | Commit freeze | _(belum diisi; catat waktu aslinya)_ |
 
@@ -31,12 +31,12 @@ Modal Rp100 juta, long-only, keputusan di close dan eksekusi di open candle beri
 
 | Mulai | CAGR | MDD | PF | Trade | Porsi biaya |
 |---|---|---|---|---|---|
-| 2023-11-01 | 12,07% | −38,75% | 1,30 | 186 | 40,79% |
-| 2022-11-01 | 9,13% | −38,75% | 1,26 | 238 | 44,50% |
+| 2023-11-01 | 11,42% | −38,94% | 1,28 | 187 | 41,64% |
+| 2022-11-01 | 8,66% | −38,94% | 1,25 | 239 | 45,34% |
 
-Per tahun sejak Nov 2023: 2023 +6,96%, 2024 +74,70%, 2025 −4,90%, 2026 −20,68%. Beli & tahan BTC/IDR pada periode yang sama +163,55%, MDD −49,43%.
+Per tahun sejak Nov 2023: 2023 +6,96%, 2024 +74,70%, 2025 −4,90%, 2026 −22,03%. Beli & tahan BTC/IDR pada periode yang sama +149,27%, MDD −49,43%.
 
-MA 20 candle 4 jam tanpa penyesuaian juga diuji sebagai pembanding (`data/banding_timeframe.txt`): CAGR −9,79%, PF 0,88, 749 trade. Pilihan 120 candle dibuat sebelum melihat angka ini, untuk menjaga rentang 20 hari.
+MA 20 candle 4 jam tanpa penyesuaian juga diuji sebagai pembanding pada 5 Nov 2026 (`data/banding_timeframe.txt`): CAGR −9,79%, PF 0,88, 749 trade. Pilihan 120 candle dibuat sebelum melihat angka ini, untuk menjaga rentang 20 hari.
 
 Keterbatasan: median spread memakai snapshot order book dari bot lain sampai 2026-11-04 02:40 UTC (`data/snapshots/`). Hasil bisa jauh berbeda di forward test.
 

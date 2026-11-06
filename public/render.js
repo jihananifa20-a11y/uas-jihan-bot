@@ -553,4 +553,4 @@ tbody tr:hover td:first-child{box-shadow:inset 4px 0 0 var(--bamboo)}
 }
 @media (max-width:900px){.corner{display:none}.baby{display:none}}
 @media (max-width:900px){.hero,.row,.row2{grid-template-columns:1fr}.rules{grid-template-columns:1fr}.brand h1{font-size:24px}.kpi .v{font-size:28px}}
-body{overflow-x:hidden}#splash{pointer-events:none}.tw{max-height:420px}table.mt td,table.mt th{white-space:nowrap}table.mt tbody tr{cursor:default}.rw{cursor:default}.rw:hover{transform:none}.podium:empty{display:none}`;
+body{overflow-x:hidden}#splash{pointer-events:none}.tw{max-height:420px}table.mt td,table.mt th{white-space:nowrap}table.mt tbody tr{cursor:default}.rw{cursor:default}.rw:hover{transform:none}.podium:empty{display:none}.note a{color:inherit}@media (max-width:560px){.kpi>.kp{width:28px;height:26px;right:8px;top:9px}.kpi small{padding-right:30px;font-size:10.5px;letter-spacing:.2px}}`;
