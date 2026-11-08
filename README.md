@@ -42,6 +42,7 @@ Keterbatasan: median spread memakai snapshot order book dari bot lain sampai 202
 
 ## Catatan sesudah freeze
 - 7 Nov 2026 subuh: `FREEZE_AT` (6 Nov 17.37 WIB) baru termuat di Vercel karena deploy sesudah freeze tertunda. Dari freeze sampai saat itu bot tetap berjalan otomatis dengan aturan yang sama, tanpa sinyal dan tanpa order, lalu state direset sekali (`RESET_STATE_FREEZE`) saat deploy.
+- 8 Nov 2026: sejak 7 Nov 22.17 WIB Indodax menolak setiap permintaan bot dengan HTTP 403, sehingga candle yang tutup 7 Nov 23.00 sampai 8 Nov 11.00 WIB tidak diproses tepat waktu. Bot tetap dipanggil tiap jam dan setiap panggilan tercatat `ERROR` di log. Dugaan penyebab: User-Agent yang mengandung kata "bot". Yang diubah hanya User-Agent di `lib/indodax.js` (`uas-dry-run-bot-jihan` → `uas-dry-run-jihan`). Aturan, parameter, universe, biaya, dan backtest tidak berubah. Panggilan pertama sesudah perbaikan memproses candle tertutup terakhir; candle sebelumnya tidak diulang, dan selisihnya terlihat di `hitung_ulang`.
 
 ## Menjalankan
 ```
